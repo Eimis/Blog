@@ -3,6 +3,6 @@ from django.shortcuts import render
 
 def Hello(request):
 	"""
-	TODO: admin, template
+	TODO: admin, DESIGN (template)
 	"""
-	return render(request, "index.html")
+	return render(request, "main.html")

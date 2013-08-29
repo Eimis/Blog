@@ -1,0 +1,32 @@
+body
+{
+background-color:#ffffff;
+}
+
+
+p
+{
+font-family:Wingdings, Zapf Dingbats;
+color:#d5cfa7;
+font-size: 150%;
+}
+
+h1
+{
+font-family:Wingdings, Zapf Dingbats;
+color:#d5cfa7;
+font-size: 160%;
+font-weight: normal;
+}
+
+a:link{
+color:#d5cfa7;
+background-size: 50% auto;
+border-radius: 7px;
+text-decoration: none;
+font-weight: bold;
+}
+a:hover{border-radius: 7px; background-color:#65594d;
+	text-decoration: none; font-weight: normal;}
+a:visited{color:#d5cfa7; text-decoration: none;}
+a:active{color:#d5cfa7; text-decoration: none;}
