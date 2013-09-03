@@ -1,8 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
+def Main(request):
+	return render(request, "main.html",)
+
 def Hello(request):
-	"""
-	TODO: admin, DESIGN (template)
-	"""
-	return render(request, "main.html")
+	return render(request, "hello.html",)
