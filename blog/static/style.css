@@ -1,0 +1,221 @@
+@import url('http://fonts.googleapis.com/css?family=Roboto Slab');
+@import url('http://fonts.googleapis.com/css?family=Lily Script One');
+
+/* TODO: Footer, Header (search?), Foto; */
+
+body {
+background-image: url("/static/images/squares.png");
+  }
+
+#wrap {
+  margin: 10% auto;
+  width: 960px;
+  background-color: red;
+  }
+
+
+#menu { 
+float: left;
+width: 190px; 
+position: fixed;
+text-align: right;
+font-family: "Roboto Slab";
+border-right: 1px solid #c6c6c6;
+
+}
+
+
+/*
+#pic { 
+float: left;
+width: 180px;
+text-align: center;
+vertical-align: center;
+font-family: "Roboto Slab";
+border: 1px solid #c6c6c6;
+}
+*/
+
+#menu a{ 
+margin: 10px;
+font-size: 20px;
+text-decoration: none;
+color:#ffffff;
+font-family: "Lily Script One"
+}
+
+#menu p{ 
+}
+
+
+#menu>.first { 
+float: left;
+width: 180px;
+/* background-color: #D3CEAA; */
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
+
+
+#menu>.second { 
+float: left;
+width: 180px; 
+/* background-color: #E7E8D1; */
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
+#menu>.third { 
+float: left;
+width: 180px; 
+/* background-color: #424242; */
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
+#menu>.fourth { 
+float: left;
+width: 180px; 
+/* background-color: #8E001C; */
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
+#menu>.fifth { 
+float: left;
+width: 180px; 
+/* background-color: #c9c9c9; */
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
+
+#content { 
+float: right;
+width: 760px;
+border-top: 10px solid #c6c6c6;
+border-bottom: 10px solid #c6c6c6;
+margin-bottom: 20px;
+background-color: white;
+}
+
+
+#content p{
+font-family: "Roboto Slab";
+font-size: 18px;
+margin: 10px;
+color: #464646;
+} 
+
+#content a:link{ 
+text-decoration: none;
+color: #a3a9aa;
+}
+
+#content a:hover{ 
+text-decoration: none;
+background-color: #E7E8D1;
+}
+
+#content a:active{ 
+text-decoration: none;
+color: #a3a9aa;
+}
+
+#content a:visited{ 
+text-decoration: none;
+color: #a3a9aa;
+}
+
+#apps_recent { 
+float: right;
+width: 760px;
+font-size: 20px;
+border-top: 1px solid #c6c6c6;
+border-top: 5px solid #c6c6c6;
+border-bottom: 5px solid #c6c6c6;
+background-color: white;
+}
+
+#apps_recent p{
+font-family: "Roboto Slab";
+font-size: 15px;
+margin: 10px;
+color: #464646;
+}
+
+#design_recent { 
+float: right;
+width: 760px;
+font-size: 20px;
+margin-bottom: 20px;
+}
+
+#design_recent p{
+font-family: "Roboto Slab";
+font-size: 15px;
+margin: 10px;
+color: #ffffff;
+text-align: center;
+}
+
+#design_recent_1 {
+float: left;
+width: 253px;;
+font-size: 20px;
+}
+
+#design_recent_1 p {
+font-family: "Roboto Slab";
+font-size: 15px;
+margin: 10px;
+color: #ffffff;
+}
+
+#design_recent_2 {
+float: left;
+width: 253px;
+font-size: 20px;
+border-left: 1px solid #c6c6c6;
+border-right: 1px solid #c6c6c6;
+}
+
+#design_recent_2 p{
+font-family: "Roboto Slab";
+font-size: 15px;
+margin: 10px;
+color: #ffffff;
+}
+
+#design_recent_3 {
+float: left;
+width: 250px;;
+font-size: 20px;
+}
+
+#design_recent_3 p{
+font-family: "Roboto Slab";
+font-size: 15px;
+margin: 10px;
+color: #ffffff;
+}
+
+#blog_recent { 
+float: right;
+width: 760px;;
+font-size: 20px;
+border-top: 5px solid #c6c6c6;
+border-bottom: 5px solid #c6c6c6;
+margin-bottom: 10%;
+background-color: white;
+}
+
+#blog_recent p{
+font-family: "Roboto Slab";
+font-size: 15px;
+margin: 10px;
+color: #464646;
+} 
+
+
