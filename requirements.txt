@@ -1,6 +1,5 @@
 BeautifulSoup==3.2.1
 Django==1.5.1
-Django-tinymce-filebrowser==0.1.1
 Mako==0.7.3
 Markdown==2.3.1
 MarkupSafe==0.15
