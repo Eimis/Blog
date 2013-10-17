@@ -1,0 +1,39 @@
+{% extends "main.html" %}
+
+{% block Content %}
+
+<div id="content"><p>You can contact me here.</p></div>
+
+<div id="blog_wrap">
+<div id="post">
+
+<!--{% if form.errors %}
+        <p style="color: red;">
+            Please correct the error{{ form.errors|pluralize }} below.
+        </p>
+    {% endif %}-->
+
+    <form action="" method="post">
+        <div id="field">
+            
+            <label for="id_subject">Subject:</label><br>
+            {{ form.subject }}
+            {{ form.subject.errors.as_text }}
+            <br>
+
+            <label for="id_email">Your e-mail address:</label><br>
+            {{ form.email }}
+            {{ form.email.errors.as_text }}<br>
+            
+            <label for="id_message">Message:</label><br>
+            {{ form.message }}
+            {{ form.message.errors.as_text }}
+        
+        {% csrf_token %}
+        <br><input type="submit" value="Send!">
+    </div>
+    </form>
+    <br>
+
+
+{% endblock %}

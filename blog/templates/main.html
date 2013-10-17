@@ -4,57 +4,68 @@
 
 <head>
 	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}style.css"/>
+	<link href="{{ STATIC_URL }}monokai.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
  	<div id="wrap">
+ 		<div id="pic"><a href="/"><img src="{{ STATIC_URL }}images/1_g.png"></img></a><br></div>
+  		 {% block Nav %}
   		<div id="menu">
-  			<!--<div id="pic"><img src="http://www.gravatar.com/avatar/54635975d6b6cf0bb518a0f0d8092b93.png"></img><br><br></div>-->
-  			<div class="first"><a href="http://www.google.lt">ABOUT</a></div><br>
-  			<div class="second"><a href="http://www.google.lt">BLOG</a></div><br>
-  			<div class="third"><a href="http://www.google.lt">APPS</a></div><br>
-  			<div class="fourth"><a href="http://www.google.lt">DESIGN</a></div><br>
-  			<div class="fifth"><a href="http://www.google.lt">CONTACT</a></div>
+  			<div class="first"><a href="/about">About</a></div><br>
+  			<div class="second"><a href="">Apps</a></div><br>
+  			<div class="third"><a href="/blog">Blog</a></div><br>
+  			<div class="fifth"><a href="/contact">Contact</a></div>
   		</div>
-	  		<div id="content">
-	  		<p>
-			<span style="font-weight: bold; font-size:29px; color: #464646;">Hello there.</span><br><br>
-			My name is <a href="mailto:eimantas.stonys@gmail.com">Eimantas Stonys.</a><br>
-			I work as a graphic / layout designer<br>
-			in a Norwegian company called<a href="http://www.instant.no/">
-			Instant Norge AS.</a><br>
+  		{% endblock %}
+
+  		{% block Content %}
+	  	<div id="content">
+			<p>
+			Hello there. My name is <a href="mailto:eimantas.stonys@gmail.com">Eimantas Stonys.</a>
+			I work as a graphic / layout designer
+			in a Norwegian company called
+			<a href="http://www.instant.no">Instant Norge AS.</a>
 			I am also trying to learn <a href="http://www.python.org/">Python</a>
 			and its framework <a href="http://www.djangoproject.com/">Django.</a><br><br>
 			You can find some of my recent projects here.
 			You can also browse my graphic design gallery.
 			I do not write much, but you can read some of my blog entries
-			in this small Django-based website. Heh.
+			in this small Django-based website.
 			</p>
 			</div>
 
+			<div id="apps_wrap">
+			<div id="apps_ribbon"></div>
 			<div id="apps_recent">
 			<p>
-			My recent projects...
-			<br>
-			<br>
+			<h1 class="frontpage"><a href="http://www.google.lt">Snappy</a></h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ornare ante eget arcu euismod ultricies. Pellentesque semper leo massa, at tincidunt nibh sodales ac. </p><hr>
+			<h1 class="frontpage"><a href="http://www.google.lt">Heroku</a></h1>
+			<p>Project description...</p>
 			</p>
 			</div>
+		</div>
 
-			<div id="design_recent">
-				<br>
-				<div id="design_recent_1"><p>Picture No. 1</p><br><br></div>
-				<div id="design_recent_2"><p>Picture No. 2</p><br><br></div>
-				<div id="design_recent_3"><p>Picture No. 3</p><br><br></div>
-				<br>.
-			</div>
-
+			<div id="blog_wrap">
+			<div id="blog_ribbon"></div>
 			<div id="blog_recent">
-			<p>
-			My recent blog entries...
-			<br>
-			<br>
-			</p>
+
+			{% for lastest_post in lastest_posts %}
+			{% if lastest_post.display %}
+			<h1 class="frontpage"><a href="/blog/{{ lastest_post.slug }}">{{ lastest_post.title }}</a></h1>
+			<p class = "pub_date">{{ lastest_post.pub_date }}</p>
+			<p style= "text-decoration: none;">{{ lastest_post.description|safe }}</p>
+			{% endif %}
+			{% endfor %}
+
 			</div>
+			</div>
+
+		
+		{% endblock %}
+
+
 
   	</div>
 </body>

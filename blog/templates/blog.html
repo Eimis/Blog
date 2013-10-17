@@ -1,0 +1,22 @@
+{% extends "main.html" %}
+
+{% block Content %}
+<div id="content"><p>You can read some entries by me here.</p></div>
+
+<div id="blog_wrap">
+<div id="blog_recent">
+
+{% for post in posts %}
+{% if post.display %}
+<h1 class="frontpage"><a href="{{ post.slug }}">{{ post.title }}</a></h1>
+<p class = "pub_date">{{ post.pub_date }}</p>
+<p>{{ post.description }}</p>
+<hr>
+{% endif %}
+{% endfor %}
+
+</div>
+</div>
+
+{% endblock %}
+

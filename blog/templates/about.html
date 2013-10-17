@@ -1,0 +1,30 @@
+<!-- TOP, social, Contact, post, img.ctr?,  -->
+
+{% extends "main.html" %}
+
+{% block Content %}
+
+<div id="blog_wrap">
+<div id="post">
+
+
+
+<h1 class="post"><a href="">{{ post.title }}</a></h1>
+<p><b>{{ post.description }}</b></p>
+{% if post.image %}
+<div id="blog_img"><a href="http://www.djangoproject.com/"><img src="{{ post.image.url }}" border="0" alt="Powered by Django." title="Powered by Django." /></a></div>
+{% endif %}
+
+
+{{ post.text|safe }}
+
+
+
+
+
+
+
+</div>
+</div>
+
+{% endblock %}

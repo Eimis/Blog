@@ -1,2 +1,66 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in commodo elit, nec faucibus libero. Sed quis orci eget nisi porta molestie id tincidunt nisl. Vestibulum ac enim eget urna ultrices hendrerit. Nam adipiscing faucibus felis, vitae viverra nunc vestibulum ut. Fusce sagittis est sed est malesuada, nec faucibus neque pellentesque. Integer cursus viverra dictum. Vestibulum auctor vel nisi in lobortis. Ut eleifend massa quis mauris hendrerit, ut feugiat felis auctor. Sed nec ligula aliquam, elementum nunc sed, molestie urna.
+<!DOCTYPE html>
 
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}style.css"/>
+</head>
+
+<body>
+ 	<div id="wrap">
+ 		<div id="pic"><a href="/main"><img src="{{ STATIC_URL }}/images/1_g.png"></img></a><br></div>
+  		 {% block Nav %}
+  		<div id="menu">
+  			<div class="first"><a href="http://www.google.lt">About</a></div><br>
+  			<div class="second"><a href="http://www.google.lt">Apps</a></div><br>
+  			<div class="third"><a href="/blog">Blog</a></div><br>
+  			<div class="fourth"><a href="http://www.google.lt">Design</a></div><br>
+  			<div class="fifth"><a href="http://www.google.lt">Contact</a></div>
+  		</div>
+  		{% endblock %}
+
+  		{% block Content %}
+	  	<div id="content">
+			<p>
+			aaa
+			</p>
+			</div>
+
+			<div id="apps_wrap">
+			<div id="apps_ribbon"></div>
+			<div id="apps_recent">
+			<p>
+			<h1 class="frontpage"><a href="http://www.google.lt">Snappy</a></h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ornare ante eget arcu euismod ultricies. Pellentesque semper leo massa, at tincidunt nibh sodales ac. </p><hr>
+			<h1 class="frontpage"><a href="http://www.google.lt">Heroku</a></h1>
+			<p>Project description...</p>
+			</p>
+			</div>
+		</div>
+
+			<div id="blog_wrap">
+			<div id="blog_ribbon"></div>
+			<div id="blog_recent">
+			<h1 class="frontpage"><a href="http://www.google.lt">Blog entry title</a></h1>
+			<p>This is an article...</p><hr>
+			<h1 class="frontpage"><a href="http://www.google.lt">Another blog entry</a></h1>
+			<p>This is an article...</p>
+			</div>
+			</div>
+
+			<div id="design_wrap">
+			<div id="design_ribbon"></div>
+			<div id="design_recent">
+			<div id="design_recent_1"><p>Picture No. 1</p></div>
+			<div id="design_recent_2"><p>Picture No. 2</p></div>
+			<div id="design_recent_3"><p>Picture No. 3</p></div>
+			</div>
+			</div>
+		{% endblock %}
+
+
+
+  	</div>
+</body>
+
+</html>

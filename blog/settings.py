@@ -21,13 +21,30 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'bdb',                      # Or path to database file if using sqlite3.
+        'NAME': 'blogdb',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': 'eimis',
         'PASSWORD': 'maxmaxkit',
         'HOST': 'localhost',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '',                      # Set to empty string for default.
     }
+}
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'eimantas.stonys@gmail.com'
+EMAIL_HOST_PASSWORD = 'labailabai1'
+
+
+
+TINYMCE_DEFAULT_CONFIG = {
+    'plugins': "table,spellchecker,paste,searchreplace",
+    'theme': "advanced",
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 10,
+    'file_browser_callback': 'mce_filebrowser',
+    "height" : 500,
 }
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
@@ -38,7 +55,7 @@ ALLOWED_HOSTS = []
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'Europe/Vilnius'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -59,12 +76,20 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = ''
+
+###### paveiksleliai tvarkomi per 3 vietas: root - kur saugo failus,
+###### url - kokie buna ju url webe, modeliuose - privalomas naujo media
+###### failu subfolderio pavadinimas.
+
+MEDIA_ROOT = '/home/eimantas/Desktop/Projects/blog/blog/static/'
+
+
+CKEDITOR_UPLOAD_PATH = '/home/eimantas/Desktop/Projects/blog/blog/static/content_imgs/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://example.com/media/", "http://media.example.com/"
-MEDIA_URL = ''
+MEDIA_URL = 'http://127.0.0.1:8000/static/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -131,6 +156,11 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.admindocs',
+    "blog",
+    "south",
+    "ckeditor",
+    "django_pygments",
+
 )
 
 # A sample logging configuration. The only tangible logging
@@ -161,3 +191,26 @@ LOGGING = {
         },
     }
 }
+
+
+# pasted from Django > Heroku tut:
+
+# Parse database configuration from $DATABASE_URL
+import dj_database_url
+DATABASES['default'] =  dj_database_url.config()
+
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Allow all host headers
+ALLOWED_HOSTS = ['*']
+
+# Static asset configuration
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = 'staticfiles'
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
