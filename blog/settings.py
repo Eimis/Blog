@@ -1,12 +1,17 @@
 # Django settings for blog project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 
 import os
+import django
 
-PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
+PROJECT_PATH = os.path.realpath(os.path.realpath(__file__))
+
+DJANGO_ROOT = os.path.dirname(os.path.realpath(django.__file__))
+SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
+ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 ALLOWED_INCLUDE_ROOTS = (
     PROJECT_PATH + '/templates/',
@@ -38,18 +43,10 @@ EMAIL_HOST_PASSWORD = 'labailabai1'
 
 
 
-TINYMCE_DEFAULT_CONFIG = {
-    'plugins': "table,spellchecker,paste,searchreplace",
-    'theme': "advanced",
-    'cleanup_on_startup': True,
-    'custom_undo_redo_levels': 10,
-    'file_browser_callback': 'mce_filebrowser',
-    "height" : 500,
-}
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -81,21 +78,20 @@ USE_TZ = True
 ###### url - kokie buna ju url webe, modeliuose - privalomas naujo media
 ###### failu subfolderio pavadinimas.
 
-MEDIA_ROOT = '/home/eimantas/Desktop/Projects/blog/blog/static/'
-
-
-CKEDITOR_UPLOAD_PATH = '/home/eimantas/Desktop/Projects/blog/blog/static/content_imgs/'
+MEDIA_ROOT = "media"
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
-# trailing slash.
+# trailing slash.yyy
 # Examples: "http://example.com/media/", "http://media.example.com/"
-MEDIA_URL = 'http://127.0.0.1:8000/static/'
+MEDIA_URL = '/media/'
+
+CKEDITOR_UPLOAD_PATH = "media/post_imgs/"
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = "staticfiles"
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
@@ -106,7 +102,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    PROJECT_PATH + '/static/',
+    '/static/',
 )
 
 # List of finder classes that know how to find static files in
@@ -157,7 +153,6 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     "blog",
-    "south",
     "ckeditor",
     "django_pygments",
 
@@ -208,9 +203,4 @@ ALLOWED_HOSTS = ['*']
 # Static asset configuration
 import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = 'staticfiles'
-STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)

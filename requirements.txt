@@ -1,18 +1,11 @@
-BeautifulSoup==3.2.1
 Django==1.5.1
-Markdown==2.3.1
-MarkupSafe==0.15
+Django-tinymce-filebrowser==0.1.1
 Pygments==1.6
 South==0.8.2
 dj-database-url==0.2.2
-dj-static==0.0.5
+-e git://github.com/kennethreitz/dj-static.git@e244f5178f0bcaed508ebed3e9f628faed849ec5#egg=dj_static-dev
 django-ckeditor==4.0.2
 django-pygments==0.1
-django-tinymce==1.5.1
 django-toolbelt==0.0.1
 gunicorn==18.0
-httplib2==0.7.7
 psycopg2==2.4.5
-pyOpenSSL==0.13
-pycrypto==2.6
-virtualenv==1.10.1
