@@ -59,7 +59,7 @@ CKEDITOR.stylesSet.add( 'default', [
 
 
 		{
-		name: 'Citata',
+		name: 'Citataa',
 		element: 'div',
 		attributes: { 'id': 'blockquote',
 						"style":"font-size: 16px; font-family: Droid Sans; color: #a3a9aa; font-style: italic;  padding: 10px 10px 10px 12px;",
