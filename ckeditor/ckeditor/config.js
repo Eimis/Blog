@@ -7,4 +7,5 @@ CKEDITOR.editorConfig = function( config ) {
 	// Define changes to default configuration here. For example:
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
+	config.stylesSet = 'cke:http://http://www.protected-badlands-9627.herokuapp.com/static/cke.js';
 };
