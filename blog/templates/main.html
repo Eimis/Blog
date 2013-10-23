@@ -3,17 +3,35 @@
 <html>
 
 <head>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script>
+
+	var offset = 10%; // left offset of the fixed div (without scrolling)
+
+$(document).scroll(function(e) {
+    // b is the fixed div
+    $('#menu').css({
+        'left': offset - $(document).scrollLeft()
+    });
+});
+
+	</script>
 	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}style.css"/>
 	<link href="{{ STATIC_URL }}monokai.css" media="screen" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
  	<div id="wrap">
  		<div id="pic"><a href="/"><img src="{{ STATIC_URL }}images/ash.png"></img></a><br></div>
   		 {% block Nav %}
+
+
+
+
   		<div id="menu">
   			<div class="first"><a href="/about">About</a></div><br>
-  			<div class="second"><a href="">Apps</a></div><br>
+  			<div class="second"><a href="#">Apps</a></div><br>
   			<div class="third"><a href="/blog">Blog</a></div><br>
   			<div class="fifth"><a href="/contact">Contact</a></div>
   		</div>
@@ -39,9 +57,9 @@
 			<div id="apps_ribbon"></div>
 			<div id="apps_recent">
 			<p>
-			<h1 class="frontpage"><a href="http://www.google.lt">Snappy</a></h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ornare ante eget arcu euismod ultricies. Pellentesque semper leo massa, at tincidunt nibh sodales ac. </p><hr>
-			<h1 class="frontpage"><a href="http://www.google.lt">Heroku</a></h1>
+			<h1 class="frontpage"><a href="#">Snappy</a></h1>
+			<p>Project description...</p><hr>
+			<h1 class="frontpage"><a href="#">Heroku</a></h1>
 			<p>Project description...</p>
 			</p>
 			</div>

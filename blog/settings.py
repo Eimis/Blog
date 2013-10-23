@@ -36,10 +36,10 @@ DATABASES = {
 }
 
 EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = 'mail.idant.lt'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'eimantas.stonys@gmail.com'
-EMAIL_HOST_PASSWORD = 'labailabai1'
+EMAIL_HOST_USER = 'idant'
+EMAIL_HOST_PASSWORD = 'maxmaxkit'
 
 
 
@@ -92,6 +92,8 @@ CKEDITOR_UPLOAD_PATH = "media/post_imgs/"
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
 STATIC_ROOT = "staticfiles"
+
+# ^ kazkodel jie yra tiesiog /static/ direktorijoje...
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
