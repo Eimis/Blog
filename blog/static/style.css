@@ -43,19 +43,24 @@ height:24px;
 width:200px;
 margin-top: 5px;
 margin-bottom: 20px;
+
 }
 
 [type=submit] /* mygt */
 {
 width:150px;
 height: 33px;
+font-size: 15px;
 background-color: white;
+color: #c6c6c6;
 
 }
 
 input[type=text]
 {
-	padding-left: 5px;
+	padding-left: 10px;
+	color: #c8c8c8;
+
 }
 
 ul[class=errorlist]
@@ -68,9 +73,14 @@ ul[class=errorlist]
 
 textarea
 {
-color:#000000;
+font-family: "droid sans";
+font-size: 14px;
+background-color:#ffffff;
 font-size:14px;
 border:#c6c6c6 solid 1px;
+padding: 7px;
+color: #c8c8c8;
+
 
 }
 
