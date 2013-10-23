@@ -8,4 +8,6 @@ CKEDITOR.editorConfig = function( config ) {
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
 	config.stylesSet = 'cke:http://http://www.protected-badlands-9627.herokuapp.com/static/cke.js';
+	config.extraPlugins = 'stylescombo';
+	config.extraPlugins = 'stylescombo';
 };
