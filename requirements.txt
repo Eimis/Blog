@@ -7,7 +7,7 @@ Markdown==2.3.1
 
 Pygments==1.6
 South==0.8.2
-django-ckeditor==4.0.2
+
 
 dj-database-url==0.2.2
 -e git://github.com/kennethreitz/dj-static.git@e244f5178f0bcaed508ebed3e9f628faed849ec5#egg=dj_static-dev
