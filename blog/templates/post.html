@@ -12,8 +12,8 @@
 <h1 class="post"><a href="">{{ post.title }}</a></h1>
 <p class = "pub_date">{{ post.pub_date }}</p>
 <p><b>{{ post.description }}</b></p>
-{% if post.image %}
-<div id="blog_img"><a href="http://www.djangoproject.com/"><img src="{{ post.image.url }}" border="0" alt="Powered by Django." title="Powered by Django." /></a></div>
+{% if post.link_to_image %}
+<div id="blog_img"><img src="{{ post.link_to_image }}" border="0" alt="Powered by Django." title="Powered by Django." /></a></div>
 {% endif %}
 
 

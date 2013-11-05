@@ -157,6 +157,7 @@ INSTALLED_APPS = (
     "blog",
     "ckeditor",
     "django_pygments",
+    "south",
 
 )
 
