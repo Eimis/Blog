@@ -10,7 +10,7 @@ class Post(models.Model):
 	description = models.TextField(null=True, blank=True)
 	pub_date = models.DateTimeField()
 	text = RichTextField()
-
+	link_to_image = models.CharField("Link to image", max_length=100)
 	slug = models.SlugField(max_length=40, blank=True)
 	display = models.BooleanField(default=True)
 	
